@@ -1,0 +1,148 @@
+@import "../../../../global/styles/variables.scss";
+.banner-container {
+  display: block;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .title-baner {
+    position: absolute;
+    bottom: 59px;
+    left: 128px;
+    .title-text {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 72px;
+      color: $color-white;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.listBanner-container-2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3";
+  color: $color-white;
+  .item {
+    &.item-1 {
+      grid-area: item1;
+      height: 812px;
+    }
+    &.item-2 {
+      grid-area: item2;
+      height: 812px;
+    }
+    &.item-3 {
+      grid-area: item3;
+      height: 812px;
+    }
+    position: relative;
+    .item-title {
+      position: absolute;
+      bottom: 70px;
+      left: 80px;
+      .item-text {
+        font-size: $font-5xl;
+        font-weight: 400;
+        text-transform: capitalize;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .item-img {
+      height: 100%;
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .banner-container {
+    height: 400px;
+
+    .title-baner {
+      bottom: 50px;
+      left: 68px;
+      .title-text {
+        font-size: 34px;
+      }
+    }
+  }
+  .listBanner-container-2 {
+    grid-gap: 30px;
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3";
+    color: $color-white;
+    .item {
+      &.item-1 {
+        height: 300px;
+      }
+      &.item-2 {
+        height: 300px;
+      }
+      &.item-3 {
+        height: 300px;
+      }
+      .item-title {
+        bottom: 40px;
+        left: 40px;
+        .item-text {
+          font-size: $font-xl;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 200px;
+
+    .title-baner {
+      bottom: 30px;
+      left: 30px;
+      .title-text {
+        font-size: $font-xl;
+      }
+    }
+  }
+  .listBanner-container-2 {
+    grid-gap: 25px;
+
+    .item {
+      &.item-1 {
+        height: 175px;
+      }
+      &.item-2 {
+        height: 175px;
+      }
+      &.item-3 {
+        height: 175px;
+      }
+      .item-title {
+        bottom: 20px;
+        left: 20px;
+        .item-text {
+          font-size: $font-xl;
+        }
+      }
+    }
+  }
+}

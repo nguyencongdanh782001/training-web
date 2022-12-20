@@ -1,0 +1,61 @@
+@import "../../../global/styles/variables.scss";
+
+.banner-section {
+  width: 100%;
+  margin-bottom: 91px;
+}
+
+.list-banner-section {
+  width: 100%;
+  .btn-aria {
+    margin-top: 110px;
+    margin-bottom: 65px;
+    text-align: center;
+    .btn-link {
+      border: 1px solid $color-black;
+      margin: 0;
+      padding: 7px;
+      color: $color-black;
+      font-weight: 300;
+      font-size: $font-xl;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .banner-section {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .list-banner-section {
+    width: 558px;
+    .btn-aria {
+      margin: 43px 0;
+
+      .btn-link {
+        padding: 7px;
+        font-weight: 300;
+        font-size: $font-xs;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-section {
+    margin-bottom: 20px;
+  }
+  .list-banner-section {
+    width: 90%;
+    .btn-aria {
+      margin: 31px 0;
+
+      .btn-link {
+        padding: 7px;
+        font-weight: 300;
+        font-size: $font-xs;
+      }
+    }
+  }
+}

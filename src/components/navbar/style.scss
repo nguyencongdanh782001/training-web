@@ -1,0 +1,155 @@
+@import "../../global/styles/variables.scss";
+
+.header-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 60px 0;
+  z-index: 1;
+  background-color: transparent;
+  &.relative {
+    position: relative;
+  }
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  .logo-text {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: $font-base;
+    letter-spacing: 10px;
+    color: $color-black;
+    font-weight: 400;
+    text-align: center;
+    &.black {
+      color: $color-black;
+    }
+    &.white {
+      color: $color-white;
+    }
+  }
+}
+.list-nav {
+  display: block;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  .nav-item {
+    display: inline-block;
+    margin-left: 50px;
+    position: relative;
+    .nav-link {
+      font-size: $font-xl;
+      color: $color-black;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      &.black {
+        color: $color-black;
+      }
+      &.white {
+        color: $color-white;
+      }
+    }
+
+    .child-list-nav {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      left: 15%;
+      top: 28px;
+      .child-nav-item {
+        list-style: none;
+        text-align: left;
+        .child-nav-link {
+          font-size: $font-base;
+          color: $color-black;
+          text-decoration: none;
+          font-weight: 600;
+          text-transform: uppercase;
+          &.black {
+            color: $color-black;
+          }
+          &.white {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggle-aria {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .header-nav {
+    padding: 30px 0;
+  }
+  .nav-container {
+    width: 90%;
+    margin: auto;
+  }
+  .logo {
+    display: inline-block;
+    .logo-text {
+      font-size: $font-xs;
+      text-align: left;
+    }
+  }
+  .list-nav {
+    display: none;
+  }
+  .toggle-aria {
+    display: inline-block;
+
+    .toggle-button {
+      padding: 0;
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      .toggle-icon {
+        color: $color-grey;
+        font-size: $font-2xl;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    padding: 20px 0;
+    z-index: 1;
+    background-color: $color-white;
+  }
+  .logo {
+    .logo-text {
+      &.white {
+        color: $color-black;
+      }
+    }
+  }
+  .toggle-aria {
+    display: inline-block;
+
+    .toggle-button {
+      .toggle-icon {
+        font-size: $font-4xl;
+      }
+    }
+  }
+}
