@@ -5,4 +5,5 @@ export const routes = {
   shopDetail: "/shop-detail",
   contact: "/contact",
   todo: "/todo-redux",
+  todoContext: "/todo-context",
 };

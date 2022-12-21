@@ -37,12 +37,12 @@ const todoSlice = createSlice({
     },
     deleteTodo(state, action: PayloadAction<any>) {
       state.data = state.data.filter(
-        (item) => item.id != action.payload
+        (item) => item.id !== action.payload
       ) as any;
     },
     searchTodo(state, action: PayloadAction<any>) {
       state.searchData = state.data.filter(
-        (item) => item.name == action.payload
+        (item) => item.name === action.payload
       ) as any;
     },
   },
