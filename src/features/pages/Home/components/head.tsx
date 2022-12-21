@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { routes } from "../../../../global/routes/path";
 import "./style.scss";
 const Head = () => {
   return (
@@ -11,7 +12,7 @@ const Head = () => {
         <Link to="#" className="link">
           about
         </Link>
-        <Link to="/shop" className="link">
+        <Link to={routes.shop} className="link">
           shop
         </Link>
       </div>
