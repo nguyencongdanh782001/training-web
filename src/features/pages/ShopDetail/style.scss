@@ -7,12 +7,14 @@
 .top {
   display: flex;
   align-items: flex-end;
-
+  justify-content: start;
   .left {
-    margin-right: 60px;
+    width: 100%;
+    margin-right: 0;
   }
 
   .right {
+    margin-left: 0;
   }
 }
 
